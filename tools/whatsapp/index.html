@@ -1,0 +1,99 @@
+<html>
+<head>
+	<title> WhatsApp w/o Saving Number </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"/>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10628268-5"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-10628268-5');
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<h1> WhatsApp without Saving the Mobile Number </h1>
+	</div>
+
+	<form id="whatsapp-form">
+		<div> <input value=" 98 9-8" id="phone-number" type="tel"/> </div>
+		<div> <input id="phone-submit" type="submit" value="submit"/> </div>
+	</form>
+
+
+	<script>
+		var whatsapp_url = 'https://api.whatsapp.com/send?phone=91';
+
+
+		var whatsapp_phone = '';
+		
+			function form_shoot(e) {
+					e.preventDefault();
+					
+					whatsapp_phone = '';
+					whatsapp_phone = document.querySelector(' #phone-number ').value;
+					whatsapp_phone = whatsapp_phone.trim();
+					whatsapp_phone = whatsapp_phone.replace(/\s/g, '');
+					whatsapp_phone = whatsapp_phone.replace(/\-/g, '');
+					whatsapp_phone = whatsapp_phone.replace(/\./g, '');
+					whatsapp_phone = whatsapp_phone.replace(/\+91/, '');
+
+				whatsapp_url_final = whatsapp_url + whatsapp_phone;
+
+				window.location.assign( whatsapp_url_final );
+			}
+
+			document.querySelector(' #whatsapp-form ').addEventListener('submit', form_shoot, false);
+	</script>
+
+	<style>
+		body {
+			background: #050505;
+			color: #fff;
+		}
+
+		#header {
+			width: 95%;
+			margin: 30px auto 0;
+			font: 24px 'Dancing Script';
+		}
+
+		#whatsapp-form {
+			width: 95%;
+			margin: 40px auto 0;
+		}
+		#phone-number {
+			width: 100%;
+			height: 54px;
+			padding: 0 16px;
+			font-size: 18px;
+			border: 0;
+			border-radius: 2px;
+		}
+
+		#phone-submit {
+			display: block;
+			width: 100%;
+			height: 54px;
+			margin: 10px 0 0;
+			padding: 0 16px;
+			background: #25D366;
+			color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+			outline: 0;
+			border: 0;
+			border-radius: 2px;
+			text-transform: uppercase;
+		}
+	</style>
+
+</body>
+</html>
