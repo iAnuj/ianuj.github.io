@@ -120,4 +120,20 @@
 					visibleClass: 'header-visible'
 				});
 
+		
+		// Contact Form Security
+		$(' .contact-form-main input[type="submit"] ').on('click', function(e){
+			var get_city_value = $(' .city-prompt .city-value ').val();
+			var check_city_value = get_city_value.match(/delhi/i);
+
+			if ( check_city_value != null ) {
+				var contact_form_action = $(' .contact-form-main ').attr('data-action');
+				$(' .contact-form-main ').attr('action', contact_form_action);
+				
+			} else {
+				alert('Sorry! That\'s an incorrect answer.');
+				e.preventDefault();
+			}
+		});
+
 })(jQuery);
