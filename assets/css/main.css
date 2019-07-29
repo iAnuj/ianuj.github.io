@@ -2318,7 +2318,7 @@ input, select, textarea {
 		/* Icons */
 
 			ul.icons li a {
-				width: 1.75em;
+/* 				width: 1.75em; */
 			}
 
 		/* Item */
@@ -2330,40 +2330,40 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				width: 20%;
+/* 				width: 20%; */
 			}
 
 			#logo .image {
-				position: relative;
-				margin: 0 0 0.5em 0;
+/* 				position: relative; */
+/* 				margin: 0 0 0.5em 0; */
 			}
 
 			#nav ul li a {
-				font-size: 0.8em;
-				padding-top: 0.5em;
-				padding-bottom: 0.5em;
+/* 				font-size: 0.8em; */
+/* 				padding-top: 0.5em; */
+/* 				padding-bottom: 0.5em; */
 			}
 
 				#nav ul li a span {
-					padding-right: 2.25em;
+/* 					padding-right: 2.25em; */
 				}
 
 					#nav ul li a span:before {
-						left: 100%;
-						margin-left: -1.25em;
-						line-height: 2.25em;
+/* 						left: 100%; */
+/* 						margin-left: -1.25em; */
+/* 						line-height: 2.25em; */
 					}
 
 		/* Footer */
 
 			#footer {
-				margin-left: 20%;
+/* 				margin-left: 20%; */
 			}
 
 		/* Main */
 
 			#main {
-				margin-left: 20%;
+/* 				margin-left: 20%; */
 			}
 
 	}
